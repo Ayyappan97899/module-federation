@@ -1,11 +1,8 @@
+import { Button } from "@chakra-ui/react";
 import React from "react";
 
-const Button = ({ text }) => {
-  return (
-    <button style={{ background: "green", width: "230px" }}>
-      {text || "hello world jfjfjjfjfjjj"}
-    </button>
-  );
+const AppButton = ({ text, colorScheme }) => {
+  return <Button colorScheme={colorScheme || "blue"}>{text || Button}</Button>;
 };
 
-export default Button;
+export default AppButton;
