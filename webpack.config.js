@@ -34,11 +34,11 @@ module.exports = {
       favicon: "./public/favicon.ico",
     }),
     new ModuleFederationPlugin({
-      name: "HeaderApp",
+      name: "centralize_ui",
       filename: "remoteEntry.js",
       exposes: {
-        "./Header": "./src/components/Header",
-        "./Button": "./src/components/Button",
+        "./HelperFunction": "./src/helperFunction",
+        "./components": "./src/components",
       },
       shared: {
         ...dependencies,
